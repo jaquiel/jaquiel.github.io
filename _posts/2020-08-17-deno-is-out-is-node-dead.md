@@ -18,8 +18,6 @@ Basically, Deno is a program for running JavaScript and TypeScript code outside 
 
 Deno was created by Ryan Dahl, the same creator of Node, but now with focus in security and productivity. It was announced by Dahl in 2018 during his talk "10 Things I Regret About Node.js" at [JSConf EU](https://2018.jsconf.eu/) that year.
 
-{% youtube M3BM9TB-8yA %}
-
 #Introduction to Deno Features
 
 First, to start, we need to install Deno and this task is very easy for any operating system. See more at https://deno.land/#installation.
