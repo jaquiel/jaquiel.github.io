@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Docker built-in container support for .NET 7"
-date:   2022-10-10 19:50:00 -0300
+date:   2022-10-10 19:50:00 +0100
 categories: dotnet csharp docker containerapps
 ---
 On 14th September 2022, Microsoft announced .NET 7 Release Candidate 1, the first of two release candidates (RC) for .NET 7 that are supported in production.
