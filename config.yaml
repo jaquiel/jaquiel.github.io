@@ -1,5 +1,6 @@
 # exampleSite/config.yaml
 baseURL: https://jaquiel.github.io/ # Replace with your domain
+publishDir = "docs"
 languageCode: en-us
 # themesDir: ../.. # Only needed for running the example site
 title: Jaquiel Paim
