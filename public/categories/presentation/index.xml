@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>presentation on Jaquiel Paim</title>
+    <link>https://jaquiel.github.io/categories/presentation/</link>
+    <description>Recent content in presentation on Jaquiel Paim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jaquiel.github.io/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to my blog!</title>
+      <link>https://jaquiel.github.io/posts/welcome-to-my-blog/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/posts/welcome-to-my-blog/</guid>
+      <description>Hello everyone! Thanks for reading this post. It is the first post of a new journey of many others. I am starting this blog to discuss the most varied subjects related to software engineering and programming languages.
+I really enjoy learning about the differences in the programming language and its paradigms. So, if you, like me, like to learn more about old and new technologies, I invite you to follow me here.</description>
+    </item>
+    
+  </channel>
+</rss>

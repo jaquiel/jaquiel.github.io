@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on Jaquiel Paim</title>
+    <link>https://jaquiel.github.io/categories/typescript/</link>
+    <description>Recent content in typescript on Jaquiel Paim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jaquiel.github.io/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deno is out. Is Node dead?</title>
+      <link>https://jaquiel.github.io/posts/deno-is-out-is-deno-dead/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/posts/deno-is-out-is-deno-dead/</guid>
+      <description>In 13th May 2020, finally Deno is out, after two years of its first release.
+For all the years of my career always I heard about the end of one or the other programing language or technology. So it was with Delphi, also PHP, within others. More recently it was the turn of the Node.Js.
+One day, maybe every programming language will die (I&amp;rsquo;m not sure &amp;hellip;), but I really don&amp;rsquo;t believe in the death of Node.</description>
+    </item>
+    
+  </channel>
+</rss>

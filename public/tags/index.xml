@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Jaquiel Paim</title>
+    <link>https://jaquiel.github.io/tags/</link>
+    <description>Recent content in Tags on Jaquiel Paim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jaquiel.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>containerapps</title>
+      <link>https://jaquiel.github.io/tags/containerapps/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/containerapps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csharp</title>
+      <link>https://jaquiel.github.io/tags/csharp/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://jaquiel.github.io/tags/docker/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotnet</title>
+      <link>https://jaquiel.github.io/tags/dotnet/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deno</title>
+      <link>https://jaquiel.github.io/tags/deno/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/deno/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://jaquiel.github.io/tags/javascript/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>node</title>
+      <link>https://jaquiel.github.io/tags/node/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://jaquiel.github.io/tags/typescript/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>presentation</title>
+      <link>https://jaquiel.github.io/tags/presentation/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/presentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>welcome</title>
+      <link>https://jaquiel.github.io/tags/welcome/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/tags/welcome/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Jaquiel Paim</title>
+    <link>https://jaquiel.github.io/categories/</link>
+    <description>Recent content in Categories on Jaquiel Paim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jaquiel.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>csharp</title>
+      <link>https://jaquiel.github.io/categories/csharp/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://jaquiel.github.io/categories/docker/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotnet</title>
+      <link>https://jaquiel.github.io/categories/dotnet/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deno</title>
+      <link>https://jaquiel.github.io/categories/deno/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/deno/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://jaquiel.github.io/categories/javascript/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://jaquiel.github.io/categories/typescript/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>presentation</title>
+      <link>https://jaquiel.github.io/categories/presentation/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/categories/presentation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

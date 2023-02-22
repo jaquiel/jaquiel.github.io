@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+    
+      <title>Deno is out. Is Node dead? | Jaquiel Paim</title>
+    
+  
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/font.css"/>
+  <link rel="stylesheet" href="/css/smigle.css"/>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+  <body>
+    <header>
+  <div id="brand">
+    <a class="icon-link" href="https://jaquiel.github.io/">
+      <img
+        class="icon"
+        src="https://avatars.githubusercontent.com/u/17420094?v=4"
+      />
+    </a>
+    <div class="text">
+      <a href="https://jaquiel.github.io/"><h1>Jaquiel Paim</h1></a>
+      <h3>Just a software engineer talking about technology.</h3>
+    </div>
+  </div>
+  <nav>
+    
+      
+        
+        <a href="/"><b>Home</b></a>
+      
+         | 
+        <a href="/about/"><b>About</b></a>
+      
+         | 
+        <a href="/posts/"><b>Posts</b></a>
+      
+         | 
+        <a href="/categories/"><b>Categories</b></a>
+      
+         | 
+        <a href="/tags/"><b>Tags</b></a>
+      
+    
+  </nav>
+  <hr />
+</header>
+
+    <div id="content">
+      
+  <main>
+    <article>
+      <h1>Deno is out. Is Node dead?</h1>
+      <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2020-08-17</time>
+    <span>in</span>
+    
+      <a href="/categories/javascript">javascript</a>, 
+      <a href="/categories/deno">deno</a>, 
+      <a href="/categories/typescript">typescript</a>
+  </strong>
+  <span> • 943 words</span>
+  <span> • 5 minute read</span>
+  
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/tags/deno">deno</a>, 
+        <a href="/tags/node">node</a>, 
+        <a href="/tags/javascript">javascript</a>, 
+        <a href="/tags/typescript">typescript</a>
+    </div>
+  
+</div>
+
+      <div><p>In 13th May 2020, finally Deno is out, after two years of its first release.</p>
+<p>For all the years of my career always I heard about the end of one or the other programing language or technology. So it was with Delphi, also PHP, within others. More recently it was the turn of the Node.Js.</p>
+<p>One day, maybe every programming language will die (<em>I&rsquo;m not sure &hellip;</em>), but I really don&rsquo;t believe in the death of Node.js. At least not now.</p>
+<h1 id="but-what-is-deno">But, what is Deno?</h1>
+<p>As written in the Deno documentation, it is a secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. You can see more details in <a href="https://deno.land">https://deno.land</a>.</p>
+<p>Basically, Deno is a program for running JavaScript and TypeScript code outside of a browser, just like the Node.</p>
+<p>Deno was created by Ryan Dahl, the same creator of Node, but now with focus in security and productivity. It was announced by Dahl in 2018 during his talk &ldquo;10 Things I Regret About Node.js&rdquo; at <a href="https://2018.jsconf.eu/">JSConf EU</a> that year.</p>
+<h1 id="introduction-to-deno-features">Introduction to Deno Features</h1>
+<p>First, to start, we need to install Deno and this task is very easy for any operating system. See more at <a href="https://deno.land/#installation">https://deno.land/#installation</a>.</p>
+<p>Deno is a command-line program. After its installation, you can get using the following commands to help you start works with it.</p>
+<pre tabindex="0"><code>$ deno help
+</code></pre><pre tabindex="0"><code>$ deno --h
+</code></pre><pre tabindex="0"><code>$ deno --help
+</code></pre><p>To launch a Deno app you need simply use at the command line:</p>
+<pre tabindex="0"><code>$ deno run &lt;entry-point&gt;
+</code></pre><p>This entry point can be a JavaScript (<em>.js</em>) file or TypeScript (<em>.ts</em>) file. But the great news is the possibility to use a URL that points to an app entry point.</p>
+<p>Deno’s website provides some examples, like these.</p>
+<p>Let’s run it to see what happens.</p>
+<pre tabindex="0"><code>$ deno run https://deno.land/std/examples/welcome.ts
+Download https://deno.land/std/examples/welcome.ts
+Compile https://deno.land/std/examples/welcome.ts
+Welcome to Deno 🦕
+</code></pre><p>Deno downloaded the <em><code>welcome.ts</code></em> file, and compiled it, and ran it. If we run the app again, Deno will just run it, because it’s cached by Deno.</p>
+<pre tabindex="0"><code>$ deno run https://deno.land/std/examples/welcome.ts
+Welcome to Deno 🦕
+</code></pre><p>Deno downloads all the modules and caches them. It will not download them again until you specifically request them with the <em><code>reload flag</code></em>.</p>
+<pre tabindex="0"><code>$ deno run --reload https://deno.land/std/examples/welcome.ts
+Download https://deno.land/std/examples/welcome.ts
+Compile https://deno.land/std/examples/welcome.ts
+Welcome to Deno 🦕
+</code></pre><p>And the best so far is that when Deno runs the app, it only compiled the TypeScript file, that is, we don’t need to use any <strong>transpiler</strong> for that.</p>
+<p>It happens because Deno <strong>supports Typescript out of the box</strong>.</p>
+<h2 id="ecmascript-modules-vs-commonjs">EcmaScript modules vs. CommonJS</h2>
+<p>Deno uses the last ECMAScript features in its API and libraries and because of the native support of ES Modules in Deno you don’t have to use other build tools to make your application ready to use in a browser.</p>
+<p>Deno supports ES Modules, instead of the CommonJS syntax used by Node. As a result, dependency management is very simple and flexible and it just uses a local or remote URL, but it provides compatibility with Node too.</p>
+<p>For example, require functions (<em><code>require()</code></em>) is not supported. The ES Modules standard syntax uses the import statement for that (<em><code>import defaultExport from &quot;module-name&quot;</code></em>).</p>
+<p>To load CommonJS modules you can use <em><code>createRequire(...)</code></em>, like the example below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createRequire</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;https://deno.land/std/node/module.ts&#34;</span>;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">require</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createRequire</span>(<span style="color:#66d9ef">import</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">url</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Loads native module polyfill.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Loads extensionless module.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cjsModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./my_mod&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Visits node_modules.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">leftPad</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;left-pad&#34;</span>);
+</span></span></code></pre></div><p>More details about that and examples like this can be seen at the link <a href="https://deno.land/std/node">https://deno.land/std/node</a>.</p>
+<p>As we saw earlier, we can use a URL as an entry point to run a Deno application. And as we can also use a local or remote URL to manage the dependencies I created a repository on <a href="https://github.com/jaquiel/deno-features/tree/master/std">GitHub</a> to send some examples from Deno and I can simply import dependencies from there.</p>
+<p>I simply created a file called <em><code>hello.ts</code></em> that imports a <em>welcome.ts function</em> that prints the same standard greeting message that we used in the previous examples.</p>
+<p>Let&rsquo;s see below the content of <em><code>hello.ts</code></em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">welcome</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;https://github.com/jaquiel/deno-features/raw/master/std/welcome.ts&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">welcome</span>()
+</span></span></code></pre></div><p>Now, the result of running the app.</p>
+<pre tabindex="0"><code>$ deno run hello.ts
+Compile file:///C:/Users/jaquiel/Documents/vscode/deno/deno-features/std/hello.ts
+Download https://github.com/jaquiel/deno-features/raw/master/std/welcome.ts
+Download https://raw.githubusercontent.com/jaquiel/deno-features/master/std/welcome.ts
+Welcome to Deno 🦕
+</code></pre><p>It&rsquo;s really very <em>easy</em> and <em>simple</em> to work with Deno.</p>
+<h1 id="security">Security</h1>
+<p>As previously seen, in Deno&rsquo;s own documentation it is defined as <strong>a secure runtime for JavaScript and TypeScript</strong>. To access to security-sensitive areas or functions, you must use permissions on the command line.</p>
+<p>Let&rsquo;s see an example of the Deno website.</p>
+<p>Running without using the <code>--allow-net</code> flag we will get the following result.</p>
+<pre tabindex="0"><code>$ deno run https://deno.land/std/examples/echo_server.ts
+error: Uncaught PermissionDenied: network access to &#34;0.0.0.0:8080&#34;, run again with the --allow-net flag
+    at unwrapResponse ($deno$/ops/dispatch_json.ts:43:11)
+    at Object.sendSync ($deno$/ops/dispatch_json.ts:72:10)
+    at Object.listen ($deno$/ops/net.ts:51:10)
+    at Object.listen ($deno$/net.ts:152:22)
+    at https://deno.land/std/examples/echo_server.ts:4:23
+</code></pre><p>We can see that we had a permission denied error. But if we use the <em>flag</em> the app will run without any problem.</p>
+<pre tabindex="0"><code>$ deno run --allow-net https://deno.land/std/examples/echo_server.ts
+Listening on 0.0.0.0:8080
+</code></pre><p>In the link <a href="https://deno.land/manual/getting_started/permissions#permissions-list">https://deno.land/manual/getting_started/permissions#permissions-list</a> , we can see the detailed list of all available permissions.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Well, my goal wasn’t to explain Deno&rsquo;s features to you, because the documentation can help you understand it easily. Rather, I just wanted to try these advantages in practice.</p>
+<p>I reiterate my opinion that Node.js will not die and will not be replaced by Deno, because it is a well-established technology that will certainly remain for many years and, in addition,  its own creator developed Deno only as an alternative to Node, and not as a replacement.</p>
+<p>Finally, although I believe in a long life for Node I can&rsquo;t help saying that the new Deno’s features are truly exciting and it is, likely, the new Hype.</p>
+</div>
+    </article>
+  </main>
+
+    </div>
+    <footer>
+  <hr />
+  
+    <p id="social">
+      Find me around the web:
+      <br />
+      
+        
+        <a href="https://github.com/jaquiel">GitHub</a>
+      
+         | 
+        <a href="https://www.linkedin.com/in/jaquielpaim/?locale=en_US">Linkedin</a>
+      
+         | 
+        <a href="https://twitter.com/JaquielPaim">Twitter</a>
+      
+    </p>
+  
+  <p class="copyright">
+    Copyright © 2023
+    <a href="https://jaquiel.github.io/"><strong>Jaquiel Paim</strong></a>.
+    This work is licensed under the
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.
+  </p>
+  <p class="builtWith">
+    Built with
+    <a href="http://www.gohugo.io/">Hugo</a>,
+    using the theme
+    <a href="https://gitlab.com/ian-s-mcb/smigle-hugo-theme">smigle</a>,
+    which was influenced by the theme
+    <a href="https://github.com/sumnerevans/smol">smol</a>.
+  </p>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jaquiel Paim</title>
+    <link>https://jaquiel.github.io/</link>
+    <description>Recent content on Jaquiel Paim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jaquiel.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker built-in container support for .NET 7</title>
+      <link>https://jaquiel.github.io/posts/docker-built-in-support-for-dotnet7/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/posts/docker-built-in-support-for-dotnet7/</guid>
+      <description>On 14th September 2022, Microsoft announced .NET 7 Release Candidate 1, the first of two release candidates (RC) for .NET 7 that are supported in production.
+The .NET 7 launch is scheduled for November 8-10, 2022 on the .NET Conf 2022! Until then we can try some of the new features and improvements of this new .NET release!
+Among several new and interesting features, one that I particularly liked and would like to highlight here is just the docker built-in container support for .</description>
+    </item>
+    
+    <item>
+      <title>Deno is out. Is Node dead?</title>
+      <link>https://jaquiel.github.io/posts/deno-is-out-is-deno-dead/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/posts/deno-is-out-is-deno-dead/</guid>
+      <description>In 13th May 2020, finally Deno is out, after two years of its first release.
+For all the years of my career always I heard about the end of one or the other programing language or technology. So it was with Delphi, also PHP, within others. More recently it was the turn of the Node.Js.
+One day, maybe every programming language will die (I&amp;rsquo;m not sure &amp;hellip;), but I really don&amp;rsquo;t believe in the death of Node.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to my blog!</title>
+      <link>https://jaquiel.github.io/posts/welcome-to-my-blog/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/posts/welcome-to-my-blog/</guid>
+      <description>Hello everyone! Thanks for reading this post. It is the first post of a new journey of many others. I am starting this blog to discuss the most varied subjects related to software engineering and programming languages.
+I really enjoy learning about the differences in the programming language and its paradigms. So, if you, like me, like to learn more about old and new technologies, I invite you to follow me here.</description>
+    </item>
+    
+  </channel>
+</rss>

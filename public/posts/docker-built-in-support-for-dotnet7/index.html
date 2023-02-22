@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+    
+      <title>Docker built-in container support for .NET 7 | Jaquiel Paim</title>
+    
+  
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/font.css"/>
+  <link rel="stylesheet" href="/css/smigle.css"/>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+  <body>
+    <header>
+  <div id="brand">
+    <a class="icon-link" href="https://jaquiel.github.io/">
+      <img
+        class="icon"
+        src="https://avatars.githubusercontent.com/u/17420094?v=4"
+      />
+    </a>
+    <div class="text">
+      <a href="https://jaquiel.github.io/"><h1>Jaquiel Paim</h1></a>
+      <h3>Just a software engineer talking about technology.</h3>
+    </div>
+  </div>
+  <nav>
+    
+      
+        
+        <a href="/"><b>Home</b></a>
+      
+         | 
+        <a href="/about/"><b>About</b></a>
+      
+         | 
+        <a href="/posts/"><b>Posts</b></a>
+      
+         | 
+        <a href="/categories/"><b>Categories</b></a>
+      
+         | 
+        <a href="/tags/"><b>Tags</b></a>
+      
+    
+  </nav>
+  <hr />
+</header>
+
+    <div id="content">
+      
+  <main>
+    <article>
+      <h1>Docker built-in container support for .NET 7</h1>
+      <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2022-10-10</time>
+    <span>in</span>
+    
+      <a href="/categories/dotnet">dotnet</a>, 
+      <a href="/categories/csharp">csharp</a>, 
+      <a href="/categories/docker">docker</a>
+  </strong>
+  <span> • 778 words</span>
+  <span> • 4 minute read</span>
+  
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/tags/dotnet">dotnet</a>, 
+        <a href="/tags/csharp">csharp</a>, 
+        <a href="/tags/docker">docker</a>, 
+        <a href="/tags/containerapps">containerapps</a>
+    </div>
+  
+</div>
+
+      <div><p>On 14th September 2022, Microsoft announced .NET 7 Release Candidate 1, the first of two release candidates (RC) for .NET 7 that are supported in production.</p>
+<p>The .NET 7 launch is scheduled for November 8-10, 2022 on the <a href="https://www.dotnetconf.net/">.NET Conf 2022</a>! Until then we can try some of the new features and improvements of this new <a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/#:~:text=Don't%20forget%20about%20.,NET%207%20release">.NET release</a>!</p>
+<p>Among several new and interesting features, one that I particularly liked and would like to highlight here is just the docker built-in container support for .NET 7.</p>
+<p>This new .NET 7 resource, which is part of one of the new cloud native features, helps .NET to further consolidate itself as an excellent alternative for building cloud-native applications and achieving resiliency, scalability, efficiency and speed in your web apps.</p>
+<h1 id="lets-get-started">Let&rsquo;s get started</h1>
+<p><em>For this release, you must have Docker and .NET 7.0.100-rc.1.22431.12 or higher installed. Additionally, only Linux-x64 containers are supported</em>.</p>
+<p>Below we can see how simple it is to build a containerized ASP.NET application from scratch.</p>
+<pre tabindex="0"><code># 1st step - create a new project 
+dotnet new mvc -n my-containerized-app
+
+# 2nd step - move project to its directory
+cd my-containerized-app
+
+# 3rd step - add a reference to a (temporary) package that creates the container
+dotnet add package Microsoft.NET.Build.Containers
+
+# 4th step - publish your project for linux-x64
+dotnet publish --os linux --arch x64 -p:PublishProfile=DefaultContainer
+
+# 5th step - run your app using the new container
+docker run -it --rm -p 5010:80 --name my-cloud-native-app my-containerized-app:1.0.0
+</code></pre><p>If you are familiar with docker and the .NET CLI, or have already mastered them, you will probably have no difficulty understanding the above sequence of instructions.</p>
+<p>However, if you&rsquo;re a <em>beginner</em>, let&rsquo;s take a look at each statement, step by step.</p>
+<p>In the <em><strong>first</strong></em> and <em><strong>second</strong></em> steps, we just created a new .NET application with the <em>ASP.NET Core Empty</em> template and then moved to the new project directory.</p>
+<pre tabindex="0"><code>$ dotnet new mvc -n my-containerized-app
+$ cd my-containerized-app
+</code></pre><ul>
+<li><code>dotnet new</code> : command to create a new project</li>
+<li><code>mvc</code> : argument to set the .NET template project</li>
+<li><code>-n</code> : option for the created output</li>
+</ul>
+<p>In the <em><strong>third</strong></em> step, we added <code>Microsoft.NET.Build.Containers</code>, a <a href="https://www.nuget.org/packages/Microsoft.NET.Build.Containers">nuget package</a> for publishing .NET applications natively as containers.</p>
+<pre tabindex="0"><code>$ dotnet add package Microsoft.NET.Build.Containers
+</code></pre><p>In our example we are using the <a href="https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&amp;tabs=visual-studio-code">empty mvc template</a>, but in your own project what you need to do is just add this package to it.</p>
+<p>Taking a look at a <em><code>my-containerized-app.csproj</code></em> file you can see the package there:</p>
+<pre tabindex="0"><code>  &lt;ItemGroup&gt;
+    &lt;PackageReference Include=&#34;Microsoft.NET.Build.Containers&#34; Version=&#34;0.1.8&#34; /&gt;
+  &lt;/ItemGroup&gt;
+</code></pre><p>In the <em><strong>fourth</strong></em> step we compiled the application.</p>
+<pre tabindex="0"><code>$ dotnet publish --os linux --arch x64 - p:PublishProfile=DefaultContainer
+</code></pre><ul>
+<li><code>dotnet publish</code>: command to compile the app</li>
+<li><code>--os linux</code> and <code>--arch</code>: options to specify the target operating system (OS) and specify the target architecture. We specified linux and x64, respectively. And it’s important to remember that only <em><strong>Linux-x64</strong></em> containers are supported</li>
+<li><code>-p</code>: used for setting properties</li>
+</ul>
+<p>If you type <code>docker images</code> in your console you could see that the image is already created:</p>
+<pre tabindex="0"><code>REPOSITORY             TAG       IMAGE ID       CREATED         SIZE
+my-containerized-app   1.0.0     b65f7ee7668a   7 seconds ago   220MB
+</code></pre><p>Now, in the <em><strong>fifth</strong></em> and last step we finally run our container.</p>
+<pre tabindex="0"><code>$ docker run -it -p 5010:80 --name my-cloud-native-app  my-containerized-app:1.0.0
+</code></pre><ul>
+<li><code>docker run</code> : container process that runs is isolated in that it has its own file system, its own networking, and its own isolated process tree separate from the host</li>
+<li><code>-it</code> : to run the container in interactive mode instead of detached mode, allowing us to execute commands while the container is in a running state</li>
+<li><code>-p 5010:80</code> : definition of used ports. <code>&lt;port that we will use on our local host&gt;:&lt;port used inside the container&gt;</code></li>
+<li><code>--name my-cloud-native-app</code> : to set a name for the container, preventing docker from generating a random name for it</li>
+<li><code>my-containerized-app:1.0.0</code> : setting the image that we want to use, in this example, <code>&lt;name of our project&gt;:&lt;version defined by .NET&gt;</code></li>
+</ul>
+<p>If all goes well we will have a result similar to this below.</p>
+<pre tabindex="0"><code>warn: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[60]
+      Storing keys in a directory &#39;/root/.aspnet/DataProtection-Keys&#39; that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {2b3bd45e-0cc8-4cad-a0b9-ce5593370e33} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://[::]:80
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /app
+</code></pre><p>Then, just access the application in any browser:<code>http://localhost:5010/</code>:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k5r1x5nyfcfr32jq7zim.png" alt="Application running"></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>So, that &rsquo;s it. We could see how simple this resource is and how <em>useful</em> it is for our projects. Unlike virtual machines, containers can rapidly scale in and out and are essential to cloud-native applications, offering granular <em>scalability</em>, <em>portability</em> and <em>efficient</em> use of <em>resources</em>.</p>
+</div>
+    </article>
+  </main>
+
+    </div>
+    <footer>
+  <hr />
+  
+    <p id="social">
+      Find me around the web:
+      <br />
+      
+        
+        <a href="https://github.com/jaquiel">GitHub</a>
+      
+         | 
+        <a href="https://www.linkedin.com/in/jaquielpaim/?locale=en_US">Linkedin</a>
+      
+         | 
+        <a href="https://twitter.com/JaquielPaim">Twitter</a>
+      
+    </p>
+  
+  <p class="copyright">
+    Copyright © 2023
+    <a href="https://jaquiel.github.io/"><strong>Jaquiel Paim</strong></a>.
+    This work is licensed under the
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.
+  </p>
+  <p class="builtWith">
+    Built with
+    <a href="http://www.gohugo.io/">Hugo</a>,
+    using the theme
+    <a href="https://gitlab.com/ian-s-mcb/smigle-hugo-theme">smigle</a>,
+    which was influenced by the theme
+    <a href="https://github.com/sumnerevans/smol">smol</a>.
+  </p>
+</footer>
+
+  </body>
+</html>

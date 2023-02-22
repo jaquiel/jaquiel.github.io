@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dotnet on Jaquiel Paim</title>
+    <link>https://jaquiel.github.io/tags/dotnet/</link>
+    <description>Recent content in dotnet on Jaquiel Paim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jaquiel.github.io/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker built-in container support for .NET 7</title>
+      <link>https://jaquiel.github.io/posts/docker-built-in-support-for-dotnet7/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/posts/docker-built-in-support-for-dotnet7/</guid>
+      <description>On 14th September 2022, Microsoft announced .NET 7 Release Candidate 1, the first of two release candidates (RC) for .NET 7 that are supported in production.
+The .NET 7 launch is scheduled for November 8-10, 2022 on the .NET Conf 2022! Until then we can try some of the new features and improvements of this new .NET release!
+Among several new and interesting features, one that I particularly liked and would like to highlight here is just the docker built-in container support for .</description>
+    </item>
+    
+  </channel>
+</rss>
