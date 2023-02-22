@@ -1,8 +1,16 @@
 ---
-layout: post
-title:  "Deno is out. Is Node dead?"
-date:   2020-08-17 14:14:54 -0300
-categories: deno node javascript typescript
+author: Jaquiel Paim
+title:  Deno is out. Is Node dead?
+date:   2020-08-17
+categories: 
+  - javascript 
+  - deno
+  - typescript
+tags:
+  - deno 
+  - node 
+  - javascript 
+  - typescript
 ---
 In 13th May 2020, finally Deno is out, after two years of its first release.
 
@@ -10,7 +18,7 @@ For all the years of my career always I heard about the end of one or the other 
 
 One day, maybe every programming language will die (_I'm not sure ..._), but I really don't believe in the death of Node.js. At least not now.
 
-#But, what is Deno?
+# But, what is Deno?
 
 As written in the Deno documentation, it is a secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. You can see more details in https://deno.land.
 
@@ -18,7 +26,7 @@ Basically, Deno is a program for running JavaScript and TypeScript code outside 
 
 Deno was created by Ryan Dahl, the same creator of Node, but now with focus in security and productivity. It was announced by Dahl in 2018 during his talk "10 Things I Regret About Node.js" at [JSConf EU](https://2018.jsconf.eu/) that year.
 
-#Introduction to Deno Features
+# Introduction to Deno Features
 
 First, to start, we need to install Deno and this task is very easy for any operating system. See more at https://deno.land/#installation.
 
@@ -76,7 +84,7 @@ And the best so far is that when Deno runs the app, it only compiled the TypeScr
 
 It happens because Deno __supports Typescript out of the box__.
 
-##EcmaScript modules vs. CommonJS
+## EcmaScript modules vs. CommonJS
 
 Deno uses the last ECMAScript features in its API and libraries and because of the native support of ES Modules in Deno you don’t have to use other build tools to make your application ready to use in a browser.
 
@@ -124,7 +132,7 @@ Welcome to Deno 🦕
 
 It's really very _easy_ and _simple_ to work with Deno.
 
-#Security  
+# Security  
 
 As previously seen, in Deno's own documentation it is defined as __a secure runtime for JavaScript and TypeScript__. To access to security-sensitive areas or functions, you must use permissions on the command line.
 
@@ -152,7 +160,7 @@ Listening on 0.0.0.0:8080
 
 In the link https://deno.land/manual/getting_started/permissions#permissions-list , we can see the detailed list of all available permissions.
 
-#Conclusion
+# Conclusion
 
 Well, my goal wasn’t to explain Deno's features to you, because the documentation can help you understand it easily. Rather, I just wanted to try these advantages in practice. 
  

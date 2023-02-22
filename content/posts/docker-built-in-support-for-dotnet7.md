@@ -1,8 +1,16 @@
 ---
-layout: post
-title:  "Docker built-in container support for .NET 7"
-date:   2022-10-10 19:50:00 +0100
-categories: dotnet csharp docker containerapps
+author: Jaquiel Paim
+title:  Docker built-in container support for .NET 7
+date:   2022-10-10
+categories: 
+  - dotnet 
+  - csharp 
+  - docker
+tags:
+  - dotnet 
+  - csharp 
+  - docker 
+  - containerapps
 ---
 On 14th September 2022, Microsoft announced .NET 7 Release Candidate 1, the first of two release candidates (RC) for .NET 7 that are supported in production.
 
@@ -14,7 +22,7 @@ Among several new and interesting features, one that I particularly liked and wo
 This new .NET 7 resource, which is part of one of the new cloud native features, helps .NET to further consolidate itself as an excellent alternative for building cloud-native applications and achieving resiliency, scalability, efficiency and speed in your web apps.
 
 
-#Let's get started
+# Let's get started
 
 _For this release, you must have Docker and .NET 7.0.100-rc.1.22431.12 or higher installed. Additionally, only Linux-x64 containers are supported_.
 
@@ -115,6 +123,6 @@ Then, just access the application in any browser:`http://localhost:5010/`:
 
 
 
-#Conclusion
+# Conclusion
 
 So, that 's it. We could see how simple this resource is and how _useful_ it is for our projects. Unlike virtual machines, containers can rapidly scale in and out and are essential to cloud-native applications, offering granular _scalability_, _portability_ and _efficient_ use of _resources_. 
