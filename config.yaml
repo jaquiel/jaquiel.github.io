@@ -1,5 +1,5 @@
 # exampleSite/config.yaml
-baseURL: https://jaquiel.github.io/public # Replace with your domain
+baseURL: https://jaquiel.github.io # Replace with your domain
 languageCode: en-us
 # themesDir: ../.. # Only needed for running the example site
 title: Jaquiel Paim
