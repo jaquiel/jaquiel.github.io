@@ -39,5 +39,14 @@ One day, maybe every programming language will die (I&amp;rsquo;m not sure &amp;
 I really enjoy learning about the differences in the programming language and its paradigms. So, if you, like me, like to learn more about old and new technologies, I invite you to follow me here.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://jaquiel.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaquiel.github.io/about/</guid>
+      <description>About My name is Jaquiel Paim. I&amp;rsquo;m a Software Engineer from Brazil, currently living and working in Portugal! I&amp;rsquo;ve working with C#/.NET (.NET Framework, .NET Core, .NET 5, .NET 6 and .NET 7), more specifically as Backend Developer ( developing RESTful APIs ) and a tiny bit as Frontend Developer ( working with React ). However, I also like to try another programming languages and technologies like Node.js, Typescript, Golang and Python among others.</description>
+    </item>
+    
   </channel>
 </rss>
