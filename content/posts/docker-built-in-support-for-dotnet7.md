@@ -6,11 +6,13 @@ categories:
   - dotnet 
   - csharp 
   - docker
+  - net7.0
 tags:
   - dotnet 
   - csharp 
   - docker 
   - containerapps
+  - net7.0
 ---
 On 14th September 2022, Microsoft announced .NET 7 Release Candidate 1, the first of two release candidates (RC) for .NET 7 that are supported in production.
 
